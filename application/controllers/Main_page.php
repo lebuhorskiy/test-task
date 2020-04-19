@@ -21,11 +21,7 @@ class Main_page extends MY_Controller
 
     public function index()
     {
-        $user = User_model::get_user();
-
-
-
-        App::get_ci()->load->view('main_page', ['user' => User_model::preparation($user, 'default')]);
+        App::get_ci()->load->view('default/main_page');
     }
 
     public function get_all_posts()
